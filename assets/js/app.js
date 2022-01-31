@@ -314,7 +314,7 @@ const IasiAIApp = (() => {
         let timeline = document.querySelector('.timeline'),
             wideScreen = window.matchMedia('(min-width: 1000px)').matches;
 
-        if (timeline !== null && wideScreen) {
+        if (timeline && wideScreen) {
 
             let meetupCardsContainer = timeline.querySelector('.meetup-cards'),
                 meetupCards = meetupCardsContainer.querySelectorAll('.meetup-card'),
@@ -340,9 +340,8 @@ const IasiAIApp = (() => {
         let slideMenuButton = document.querySelector('button.btn-slide'),
             headerNavigation = document.querySelector('header nav');
 
-        if (slideMenuButton !== null) {
+        if (slideMenuButton) {
             slideMenuButton.addEventListener('click', e => {
-
                 e.preventDefault();
                 e.stopPropagation();
 
@@ -358,8 +357,8 @@ const IasiAIApp = (() => {
                 );
 
                 // Attach event on slide close
-                let slideMenuCloseButton = document.querySelector('.dialog button.btn-slide-close');
-                if (slideMenuCloseButton !== null) {
+                let slideMenuCloseButton = dlg.dlg.querySelector('button.btn-slide-close');
+                if (slideMenuCloseButton) {
                     slideMenuCloseButton.addEventListener('click', e => {
                         e.preventDefault();
                         e.stopPropagation();
@@ -374,7 +373,7 @@ const IasiAIApp = (() => {
      * Exposed methods.
      */
     return {
-        arrageCards: arrangeMeetupCards,
+        arrangeCards: arrangeMeetupCards,
         slide: slideMenu
     };
 
@@ -384,6 +383,6 @@ const IasiAIApp = (() => {
  * Initialize app.
  */
 (() => {
-    IasiAIApp.arrageCards();
+    IasiAIApp.arrangeCards();
     IasiAIApp.slide();
 })();

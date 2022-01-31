@@ -1,0 +1,104 @@
+/*
+ * IAȘI AI — The artificial intelligence community of Iași
+ *
+ * @link https://iasi.ai
+ * @author Eugen Bușoiu
+ * @copyright 2017 - 2022 All Rights Reserved.
+ */
+
+// Button variables
+@button1TextColor: @buttonDefaultTextColor;
+@button1BackgroundColor: @buttonDefaultBackgroundColor;
+@button1BackgroundHoverColor: @buttonDefaultBackgroundHoverColor;
+
+@button2TextColor: @whiteTextColor;
+@button2TextColorHover: @whiteTextColor;
+@button2BorderColor: transparent;
+@button2BorderColorHover: @color1;
+@button2BackgroundColor: transparent;
+@button2BackgroundColorHover: @color1;
+
+@button3TextColor: @whiteTextColor;
+@button3TextColorHover: @textColor;
+@button3BorderColor: @color3;
+@button3BorderColorHover: darken(@button3BorderColor, 6%);
+@button3BackgroundColor: transparent;
+@button3BackgroundColorHover: darken(@button3BorderColor, 6%);
+
+@button4TextColor: @whiteTextColor;
+@button4TextColorHover: @whiteTextColor;
+@button4BorderColor: @color9;
+@button4BorderColorHover: darken(@button4BorderColor, 6%);
+@button4BackgroundColor: @color9;
+@button4BackgroundColorHover: darken(@button4BackgroundColor, 6%);
+
+@buttonFacebookTextColor: @whiteTextColor;
+@buttonFacebookBackgroundColor: @color10;
+@buttonFacebookBackgroundHoverColor: darken(@buttonFacebookBackgroundColor, 6%);
+
+@buttonMeetupTextColor: @whiteTextColor;
+@buttonMeetupBackgroundColor: @color5;
+@buttonMeetupBackgroundHoverColor: darken(@buttonMeetupBackgroundColor, 6%);
+
+@buttonSlackTextColor: @whiteTextColor;
+@buttonSlackBackgroundColor: @color11;
+@buttonSlackBackgroundHoverColor: darken(@buttonSlackBackgroundColor, 6%);
+
+@buttonLinkedInTextColor: @whiteTextColor;
+@buttonLinkedInBackgroundColor: @color12;
+@buttonLinkedInBackgroundHoverColor: darken(@buttonLinkedInBackgroundColor, 6%);
+
+@buttonYouTubeTextColor: @whiteTextColor;
+@buttonYouTubeBackgroundColor: @color13;
+@buttonYouTubeBackgroundHoverColor: darken(@buttonYouTubeBackgroundColor, 6%);
+
+// Buttons
+// Disabled button
+.btn-disabled {
+  .button-bordered-bottom(@buttonDisabledTextColor, @buttonDisabledBackgroundColor, @buttonDisabledBackgroundHoverColor);
+}
+
+// Default button
+.btn-1 {
+  .button-bordered-bottom(@button1TextColor, @button1BackgroundColor, @button1BackgroundHoverColor);
+}
+
+// Header navigation button
+.btn-2 {
+  .button(@button2TextColor, @button2TextColorHover, @button2BorderColor, @button2BorderColorHover, @button2BackgroundColor, @button2BackgroundColorHover, true);
+}
+
+// Featured item navigation button
+.btn-3 {
+  .button(@button3TextColor, @button3TextColorHover, @button3BorderColor, @button3BorderColorHover, @button3BackgroundColor, @button3BackgroundColorHover);
+}
+
+// Featured item attend event button
+.btn-4 {
+  .button(@button4TextColor, @button4TextColorHover, @button4BorderColor, @button4BorderColorHover, @button4BackgroundColor, @button4BackgroundColorHover);
+}
+
+// Facebook button
+.btn-facebook {
+  .button-bordered-bottom(@buttonFacebookTextColor, @buttonFacebookBackgroundColor, @buttonFacebookBackgroundColor);
+}
+
+// Meetup
+.btn-meetup {
+  .button-bordered-bottom(@buttonMeetupTextColor, @buttonMeetupBackgroundColor, @buttonMeetupBackgroundHoverColor);
+}
+
+// Slack
+.btn-slack {
+  .button-bordered-bottom(@buttonSlackTextColor, @buttonSlackBackgroundColor, @buttonSlackBackgroundHoverColor);
+}
+
+// LinkedIn
+.btn-linkedin {
+  .button-bordered-bottom(@buttonLinkedInTextColor, @buttonLinkedInBackgroundColor, @buttonLinkedInBackgroundHoverColor);
+}
+
+// YouTube
+.btn-youtube {
+  .button-bordered-bottom(@buttonYouTubeTextColor, @buttonYouTubeBackgroundColor, @buttonYouTubeBackgroundHoverColor);
+}

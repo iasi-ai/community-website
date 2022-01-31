@@ -1,0 +1,234 @@
+/*
+ * IAȘI AI — The artificial intelligence community of Iași
+ *
+ * @link https://iasi.ai
+ * @author Eugen Bușoiu
+ * @copyright 2017 - 2022 All Rights Reserved.
+ */
+
+// Sections
+section {
+
+  // IASI AI community (about section)
+  &.iasi-ai-community {
+    background: @backgroundColor url('@{S3}bg.png');
+    border-top: 1px solid @sectionBorderColor;
+    border-bottom: 1px solid @sectionBorderColor;
+
+    padding: 2.5em 0;
+
+    // Section heading
+    h4 {
+      text-align: center;
+      margin: 0 0 1em;
+      font-size: 1.4em;
+
+      @media (min-width: @mediaQueryMedium) {
+        text-align: left;
+      }
+
+      strong {
+        color: @color1;
+      }
+    }
+
+    // Paragraphs
+    p {
+      padding: 0 0 2em;
+
+      @media (min-width: @mediaQueryMedium) {
+        padding: 0 1em 2em 0;
+      }
+    }
+
+    // Navigation
+    nav {
+      margin: 0 0 2em;
+
+      @media (min-width: @mediaQueryMedium) {
+        margin: 0;
+      }
+
+      ul {
+        li {
+          .grid;
+        }
+      }
+    }
+
+    // About IASI AI community
+    .about-iasi-ai-community {
+      .grid;
+
+      @media (min-width: @mediaQueryMedium) {
+        .grid(9);
+      }
+    }
+
+    // Community in numbers
+    .community-in-numbers {
+      .grid;
+
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      align-content: space-evenly;
+
+      font-size: .9em;
+
+      @media (min-width: @mediaQueryMedium) {
+        .grid(4);
+      }
+
+      @media (min-width: @mediaQueryLarge) {
+        .grid(3);
+      }
+
+      span {
+        .grid(6);
+
+        font-size: 1.1em;
+        text-align: center;
+
+        strong {
+          display: block;
+          font-size: 1.6em;
+          margin-bottom: -10px;
+          letter-spacing: -.05em;
+        }
+      }
+    }
+  }
+
+  // Speaker
+  &.iasi-ai-speaker {
+    margin: 1.2em auto 0;
+
+    @media (min-width: @mediaQueryMedium) {
+      padding: 1em 0 3em;
+    }
+
+    // Meet the speaker heading
+    h3 {
+      margin: 0 auto 1em;
+    }
+
+    // Section container
+    .speaker-meta {
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+
+      margin-bottom: 2em;
+      text-align: center;
+
+      @media (min-width: @mediaQueryMedium) {
+        flex-flow: row nowrap;
+        text-align: left;
+      }
+
+      // Speaker photo
+      img {
+        display: block;
+
+        width: 150px;
+        height: 150px;
+        min-width: 150px;
+
+        border-radius: 50%;
+        border: 1px solid @color8;
+
+        object-fit: cover;
+        object-position: center;
+
+        margin: 0 0 2em;
+
+        @media (min-width: @mediaQueryMedium) {
+          margin: 0 3em 0 0;
+        }
+      }
+
+      // Speaker name and headline
+      h5 {
+        font-weight: 700;
+        margin: 0 0 1em;
+
+        cite {
+          display: block;
+          color: @color4;
+          font-weight: 400;
+          font-style: normal;
+
+          @media (min-width: @mediaQueryMedium) {
+            display: inline;
+
+            &:before {
+              content: '\2014';
+              padding-right: 5px;
+            }
+          }
+        }
+      }
+
+      // Speaker description
+      span {
+        text-align: center;
+
+        @media (min-width: @mediaQueryMedium) {
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  // Description timeline
+  &.description-timeline {
+    position: relative;
+    margin: 1em;
+
+    &:after {
+      z-index: 1;
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 4px;
+      border-left: 1px solid @color7;
+    }
+
+    div {
+      position: relative;
+
+      font-size: 1.1em;
+      padding-left: 2em;
+      margin-bottom: .5em;
+
+      .grid;
+
+      @media (min-width: @mediaQueryMedium) {
+        .grid(10);
+      }
+
+      &:before {
+        left: 0;
+        top: 12px;
+        position: absolute;
+        content: "";
+        width: 9px;
+        height: 9px;
+        background-color: @color1;
+        border-radius: 50%;
+        box-shadow: 0 0 2px 8px @color3;
+
+        z-index: 2;
+      }
+
+      span {
+        display: block;
+        font-size: .72em;
+
+        margin: 4px 10px;
+      }
+    }
+  }
+}

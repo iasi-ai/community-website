@@ -1,0 +1,121 @@
+/*
+ * IAȘI AI — The artificial intelligence community of Iași
+ *
+ * @link https://iasi.ai
+ * @author Eugen Bușoiu
+ * @copyright 2017 - 2022 All Rights Reserved.
+ */
+
+// Default button
+.btn {
+
+  display: inline-block;
+
+  font-family: 'Open Sans', Georgia, sans-serif;
+  font-size: 1em;
+
+  border-radius: .2em;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline: none;
+
+  margin: 0;
+  padding: .4em .8em;
+  border: 1px solid transparent;
+  transition: background-color .05s;
+
+  // Focus/Active states
+  &:focus, &:active {
+    box-shadow: none;
+    outline: none;
+  }
+
+  // Large button
+  &.btn-lg {
+    font-size: 1.15em;
+    padding: .6em 1.2em;
+  }
+
+  // Small button
+  &.btn-sm {
+    font-size: .8em;
+  }
+
+  // Centered button
+  &.btn-centered {
+    display: table;
+    margin: auto;
+  }
+
+  // Disabled button
+  &.btn-disabled,
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  // Clear button styling (default)
+  &.btn-def {
+    background: @buttonDefaultBackgroundColor;
+    color: @buttonDefaultTextColor;
+  }
+
+  // Clear styling
+  &.btn-clear,
+  &.btn-clear:hover {
+    background: transparent;
+    border: none;
+    outline: none;
+    border-radius: 0;
+  }
+
+  // Wide button in mobile
+  &.btn-wide-mobile {
+    @media (max-width: 425px) {
+      width: 100%;
+    }
+  }
+}
+
+// Form group
+.form-group {
+  margin-bottom: 15px;
+
+  &.form-group-center {
+    text-align: center;
+  }
+
+  &.form-group-margin-10 {
+    margin: 10px;
+  }
+}
+
+// Form label
+.form-label {
+  display: inline-block;
+  max-width: 100%;
+}
+
+// Form control
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 6px 12px;
+  font-size: 1em;
+  line-height: 1.66;
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: .2em;
+  .appearance(none);
+}

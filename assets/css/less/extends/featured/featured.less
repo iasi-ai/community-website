@@ -1,0 +1,44 @@
+/*
+ * IAȘI AI — The artificial intelligence community of Iași
+ *
+ * @link https://iasi.ai
+ * @author Eugen Bușoiu
+ * @copyright 2017 - 2022 All Rights Reserved.
+ */
+
+// Featured Item
+.featured {
+  &:before {
+    position: absolute;
+    content: '';
+    text-transform: lowercase;
+    margin-top: -2.8em;
+    background-color: @color3;
+    color: @color2;
+    font-size: .5em;
+    line-height: 1.2em;
+    padding: 4px 12px;
+    border-radius: .1em;
+    opacity: .85;
+  }
+
+  // Featured article
+  &.featured-article:before {
+    content: 'featured article';
+  }
+
+  // Upcoming event
+  &.featured-upcoming-event:before {
+    content: 'upcoming event';
+  }
+
+  // News
+  &.featured-news:before {
+    content: 'news';
+  }
+
+  // Anchor
+  a {
+    color: @whiteTextColor;
+  }
+}

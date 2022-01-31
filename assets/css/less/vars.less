@@ -1,0 +1,100 @@
+/*
+ * IAȘI AI — The artificial intelligence community of Iași
+ *
+ * @link https://iasi.ai
+ * @author Eugen Bușoiu
+ * @copyright 2017 - 2022 All Rights Reserved.
+ */
+
+// AWS S3 bucket path
+@S3: 'https://s3.iasi.ai/';
+
+// Devices
+// Small devices (landscape phones, 576px and up)
+@mediaQuerySmall: 576px;
+// Medium devices (tablets, 768px and up)
+@mediaQueryMedium: 768px;
+// Large devices (desktops, 992px and up)
+@mediaQueryLarge: 992px;
+// Extra large devices (large desktops, 1200px and up)
+@mediaQueryExtraLarge: 1200px;
+// HD
+@mediaQueryExtraLarge2x: 1400px;
+// QHD
+@mediaQueryExtraLarge3x: 1600px;
+// Full HD
+@mediaQueryExtraLarge4x: 1900px;
+
+// Base colors
+@color1: #a24153;
+@color2: #222;
+@color3: #fff;
+@color4: #444;
+@color5: #ed1c40; // Meetup
+@color6: #f1f1f1;
+@color7: #eee;
+@color8: #aaa;
+@color9: #5ab552;
+@color10: #1877f2; // Facebook
+@color11: #4a154b; // Slack
+@color12: #0077b5; // LinkedIn
+@color13: #ff0000; // YouTube
+
+// Header cover
+// https://s3.iasi.ai/app.cover/
+@coverPath: '@{S3}app.cover/pie-ai-deeplearning/';
+@coverLg: '@{coverPath}cover-lg.jpg';
+@coverMd: '@{coverPath}cover.jpg';
+@coverSm: '@{coverPath}cover-sm.jpg';
+
+// Custom font version
+@iasiaiWebFontVersion: 'v3';
+
+// Elements colors
+@scrollBarColor: @color1;
+@backgroundColor: @color3;
+@textColor: @color2;
+@anchorColor: @color2;
+@whiteTextColor: @color3;
+
+// Buttons
+@buttonDisabledTextColor: @color8;
+@buttonDisabledBackgroundColor: @color7;
+@buttonDisabledBackgroundHoverColor: @color7;
+
+@buttonDefaultTextColor: @textColor;
+@buttonDefaultBackgroundColor: @color6;
+@buttonDefaultBackgroundHoverColor: darken(@buttonDefaultBackgroundColor, 6%);
+
+// Header navigation
+@headerNavBorderColor: @color1;
+@headerNavAnchorColor: @whiteTextColor;
+@headerNavAnchorHoverBackgroundColor: @color1;
+@headerNavAnchorHoverBorderColor: @color4;
+
+// Section
+@sectionBorderColor: @color6;
+
+// Section, Upcoming event
+@sectionUpcomingEventBorderColor: @color6;
+
+// Section, Community in numbers
+@sectionCommunityNumbersCoverPath: '@{S3}app.cover/cross-fold-validation/';
+@sectionCommunityNumbersCoverLg: '@{sectionCommunityNumbersCoverPath}cross-fold-lg.jpg';
+@sectionCommunityNumbersCoverMd: '@{sectionCommunityNumbersCoverPath}cross-fold-md.jpg';
+@sectionCommunityNumbersCoverSm: '@{sectionCommunityNumbersCoverPath}cross-fold-sm.jpg';
+
+// Section, Media Appearances
+@sectionMediaAppearancesCoverPath: '@{S3}app.cover/pin-magazine-ai-cover/';
+@sectionMediaAppearancesCoverLg: '@{sectionMediaAppearancesCoverPath}pin-magazine-lg.jpg';
+@sectionMediaAppearancesCoverMd: '@{sectionMediaAppearancesCoverPath}pin-magazine-md.jpg';
+@sectionMediaAppearancesCoverSm: '@{sectionMediaAppearancesCoverPath}pin-magazine-sm.jpg';
+
+// Section, Join
+@sectionJoinCoverPath: '@{S3}app.cover/iasi-ai-join/';
+@sectionJoinCoverLg: '@{sectionJoinCoverPath}iasi-ai-join-lg.jpg';
+@sectionJoinCoverMd: '@{sectionJoinCoverPath}iasi-ai-join-md.jpg';
+@sectionJoinCoverSm: '@{sectionJoinCoverPath}iasi-ai-join-sm.jpg';
+
+// Timeline
+@timelineHeadBackgroundColor: @color1;

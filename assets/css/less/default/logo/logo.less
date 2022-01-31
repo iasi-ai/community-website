@@ -1,0 +1,32 @@
+/*
+ * IAȘI AI — The artificial intelligence community of Iași
+ *
+ * @link https://iasi.ai
+ * @author Eugen Bușoiu
+ * @copyright 2017 - 2022 All Rights Reserved.
+ */
+
+// Logo
+.logo {
+  display: block;
+  width: 150px;
+  height: 54px;
+
+  background: url('@{S3}app.logo/2/logo-150.png') no-repeat center;
+
+  .text-hide;
+
+  &.logo-lg {
+    width: 150px;
+    height: 54px;
+
+    background: url('@{S3}app.logo/2/logo-150.png') no-repeat center;
+
+    @media (min-width: @mediaQueryMedium) {
+      width: 200px;
+      height: 66px;
+
+      background: url('@{S3}app.logo/2/logo-200.png') no-repeat center;
+    }
+  }
+}

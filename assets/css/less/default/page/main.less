@@ -1,0 +1,116 @@
+/*
+ * IAȘI AI — The artificial intelligence community of Iași
+ *
+ * @link https://iasi.ai
+ * @author Eugen Bușoiu
+ * @copyright 2017 - 2022 All Rights Reserved.
+ */
+
+// Main
+main {
+  position: relative;
+
+  background: @backgroundColor;
+  padding: 3em 0 4em;
+
+  min-height: 450px;
+
+  // iPhone X left/right padding when in landscape
+  @media (orientation: landscape) {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+
+  // Heading
+  h2 {
+    font-size: 2em;
+
+    margin-bottom: 1em;
+    line-height: 1.3em;
+
+    letter-spacing: -.02em;
+    text-align: center;
+
+    @media (min-width: @mediaQueryMedium) {
+      text-align: left;
+    }
+  }
+
+  h3 {
+    margin: 1.2em auto .4em;
+    text-align: center;
+
+    @media (min-width: @mediaQueryMedium) {
+      text-align: left;
+    }
+  }
+
+  h4 {
+    font-size: 1.1em;
+    text-align: center;
+
+    @media (min-width: @mediaQueryMedium) {
+      text-align: left;
+    }
+  }
+
+  p {
+    margin: 0 0 1.2em;
+    padding: 0;
+
+    &:nth-last-child(1) {
+      margin: 0;
+    }
+  }
+
+  blockquote {
+    .grid;
+    margin: 2em auto;
+
+    @media (min-width: @mediaQueryLarge) {
+      border-left: 4px solid @color6;
+      padding: 1.5em 2em;
+      border-radius: .5em;
+    }
+  }
+
+  // Image
+  img.article-image {
+    .grid;
+    height: 200px;
+
+    border-radius: .25em;
+    object-fit: cover;
+    object-position: center;
+    border: 6px solid @sectionBorderColor;
+
+    margin: 0 0 2em;
+
+    @media (min-width: @mediaQueryMedium) {
+      .grid(4);
+      height: auto;
+      max-height: 500px;
+
+      margin: 0 0 2em 2em;
+      float: right;
+
+    }
+  }
+
+  // Tables
+  table {
+    .grid;
+    padding: 1em;
+    border: 1px solid @color6;
+    border-radius: .5em;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .1);
+    text-align: left;
+    margin: 2em 0 3em;
+
+    background: rgba(255, 255, 255, .7);
+
+    @media (min-width: @mediaQueryMedium) {
+      .grid(6);
+    }
+  }
+}

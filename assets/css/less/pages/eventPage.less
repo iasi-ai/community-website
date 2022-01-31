@@ -1,0 +1,86 @@
+/*
+ * IAȘI AI — The artificial intelligence community of Iași
+ *
+ * @link https://iasi.ai
+ * @author Eugen Bușoiu
+ * @copyright 2017 - 2022 All Rights Reserved.
+ */
+
+// Workshop page
+.event-page {
+
+  // Card
+  .event-card {
+    position: relative;
+    display: block;
+
+    width: 100%;
+
+    z-index: 2;
+
+    margin: 10px auto;
+
+    height: 200px;
+    overflow: hidden;
+
+    // Background effect with opacity
+    &:before {
+      position: absolute;
+
+      content: '';
+
+      width: 100%;
+      height: 100%;
+
+      top: 0;
+      left: 0;
+
+      opacity: .1;
+      border: 2px solid @color8;
+    }
+
+    &:after {
+      position: absolute;
+
+      content: '';
+
+      width: 100%;
+      height: 100%;
+
+      top: 0;
+      left: 0;
+
+      background-image: linear-gradient(to bottom, rgba(255, 255, 255, .75) 20%, rgba(255, 255, 255, 0) 100%);
+
+      z-index: -1;
+    }
+  }
+
+  // Prerequisites
+  .event-prerequisites {
+
+    padding: 0 15px;
+    list-style: disc;
+
+    @media (min-width: 768px) {
+      margin: 0 30px;
+      padding: 5px 10px;
+    }
+  }
+
+  // Multiple dates
+  .event-multiple-dates {
+    ul {
+      margin: 16px 0 0;
+
+      &:nth-child(1) {
+        margin: 0;
+      }
+    }
+  }
+
+  // Date Venue placeholder
+  .event-date-venue {
+    margin: 0 0 1.2em;
+  }
+}

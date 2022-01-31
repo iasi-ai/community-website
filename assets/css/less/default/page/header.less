@@ -1,0 +1,81 @@
+/*
+ * IAȘI AI — The artificial intelligence community of Iași
+ *
+ * @link https://iasi.ai
+ * @author Eugen Bușoiu
+ * @copyright 2017 - 2022 All Rights Reserved.
+ */
+
+// Header
+header {
+  position: relative;
+  background: url(@coverSm) no-repeat fixed center top;
+  background-size: cover;
+  border-bottom: 1px solid @headerNavBorderColor;
+
+  padding: 2em 0;
+  z-index: 1;
+
+  @media (min-width: @mediaQueryMedium) {
+    background: url(@coverMd) no-repeat fixed center center;
+    background-size: cover;
+
+    padding: 3em 0 1em;
+    min-height: 200px;
+  }
+
+  @media (min-width: @mediaQueryLarge) {
+    background: url(@coverLg) no-repeat fixed center center;
+    background-size: cover;
+  }
+
+  &:after {
+    position: absolute;
+    content: '';
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background: rgba(0, 0, 0, .6);
+    z-index: -1;
+
+    @media (min-width: @mediaQueryLarge) {
+      background: linear-gradient(180deg, rgba(0, 0, 0, .75), rgba(0, 0, 0, .35), rgba(0, 0, 0, 0.35));
+    }
+  }
+
+  // Slide button
+  .btn-slide {
+    position: absolute;
+    left: 0;
+    color: @whiteTextColor;
+    font-size: 1.4em;
+    padding: .6em 1.2em;
+
+    @media (min-width: @mediaQueryMedium) {
+      display: none;
+    }
+  }
+
+  // Header navigation
+  nav {
+    display: none;
+
+    @media (min-width: @mediaQueryMedium) {
+      display: block;
+      margin: 2em auto;
+    }
+
+    @media (min-width: @mediaQueryLarge) {
+      .grid;
+      margin: 0;
+    }
+
+    // Slide menu close button
+    .btn-slide-close {
+      display: none;
+    }
+  }
+}

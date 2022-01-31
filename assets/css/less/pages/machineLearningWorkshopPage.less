@@ -1,0 +1,39 @@
+/*
+ * IAȘI AI — The artificial intelligence community of Iași
+ *
+ * @link https://iasi.ai
+ * @author Eugen Bușoiu
+ * @copyright 2017 - 2022 All Rights Reserved.
+ */
+
+// Machine Learning workshop page
+.machine-learning-workshop-page {
+
+  main {
+    &:before {
+      content: '';
+      position: absolute;
+      top: 15%;
+      right: 7%;
+      width: 260px;
+      height: 280px;
+      opacity: .15;
+
+      background: url('@{S3}workshops/machine-learning-workshop/machine-learning-256.jpg') no-repeat;
+
+      @media (min-width: @mediaQueryMedium) {
+        min-width: 260px;
+        min-height: 280px;
+
+        background: url('@{S3}workshops/machine-learning-workshop/machine-learning-256.jpg') no-repeat;
+      }
+
+      @media (min-width: @mediaQueryLarge) {
+        min-width: 550px;
+        min-height: 570px;
+
+        background: url('@{S3}workshops/machine-learning-workshop/machine-learning-512.jpg') no-repeat;
+      }
+    }
+  }
+}

@@ -1,0 +1,109 @@
+/*
+ * IAȘI AI — The artificial intelligence community of Iași
+ *
+ * @link https://iasi.ai
+ * @author Eugen Bușoiu
+ * @copyright 2017 - 2022 All Rights Reserved.
+ */
+
+// Footer
+footer {
+  background: @backgroundColor;
+  border-top: 1px solid @sectionBorderColor;
+
+  padding: 2em 0 3em;
+  font-size: .88em;
+
+  // Footer sections
+  section {
+    .grid;
+
+    @media (min-width: @mediaQueryMedium) {
+      width: auto;
+    }
+
+    h5 {
+      margin: 0 0 1.2em;
+      text-align: center;
+
+      @media (min-width: @mediaQueryLarge) {
+        text-align: left;
+      }
+    }
+
+    // Community partners
+    &.community-partners {
+      margin: 0 0 3em;
+
+      @media (min-width: @mediaQueryLarge) {
+        margin: 0;
+      }
+
+      ul {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+
+        @media (min-width: @mediaQueryLarge) {
+          flex-flow: row nowrap;
+          align-items: center;
+        }
+
+        li {
+          margin: .5em;
+
+          @media (min-width: @mediaQueryLarge) {
+            margin: 0 0 0 2em;
+
+            &:nth-child(1) {
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+
+    // Community description
+    &.community-social {
+      text-align: center;
+
+      @media (min-width: @mediaQueryLarge) {
+        text-align: right;
+      }
+
+      // Footer navigation
+      nav {
+        margin: 0 0 2em;
+
+        ul {
+          li {
+            @media (min-width: @mediaQueryMedium) {
+              padding: 0 0 0 .3em;
+            }
+
+            a {
+              @media (min-width: @mediaQueryMedium) {
+                font-size: .8em;
+                padding: .4em .8em;
+              }
+
+              span {
+                &:nth-child(1) {
+                }
+
+                &:nth-child(2) {
+                  display: none;
+
+                  @media (min-width: @mediaQueryMedium) {
+                    display: inline-block;
+                    margin-left: .8em;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

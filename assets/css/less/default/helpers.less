@@ -1,0 +1,172 @@
+/*
+ * IAȘI AI — The artificial intelligence community of Iași
+ *
+ * @link https://iasi.ai
+ * @author Eugen Bușoiu
+ * @copyright 2017 - 2022 All Rights Reserved.
+ */
+
+/**
+ * Floats
+ */
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+/**
+ * Clear fix
+ */
+.cf() {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+.cf {
+  .cf();
+}
+
+/**
+ * Appearance
+ */
+.appearance(@value: none) {
+  -webkit-appearance: @value;
+  -moz-appearance: @value;
+  appearance: @value;
+}
+
+/**
+ * Text hide
+ */
+.text-hide() {
+  font: ~"0/0" a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+.text-hide {
+  .text-hide();
+}
+
+/**
+ * Visible phone/desktop
+ */
+.hide {
+  display: none !important;
+}
+
+.show {
+  display: block !important;
+}
+
+.show-inline {
+  display: inline-block !important;
+}
+
+.show-sm {
+  .show;
+  .hide-lg;
+}
+
+.show-lg {
+  @media (min-width: 768px) {
+    .show;
+  }
+}
+
+.show-inline-lg {
+  @media (min-width: 768px) {
+    .show-inline;
+  }
+}
+
+.hide-sm {
+  .hide;
+  .show-lg;
+}
+
+.hide-lg {
+  @media (min-width: 768px) {
+    .hide;
+  }
+}
+
+/**
+ * Spinner
+ */
+.spinner {
+  display: block;
+  width: 48px;
+  height: 48px;
+  clear: both;
+  margin: 20px auto;
+  border-radius: 50%;
+
+  -webkit-animation: circleRotation .6s infinite linear;
+  animation: circleRotation .6s infinite linear;
+
+  //border: 4px @background-main-color solid;
+  //border-top: 4px @logo-color solid;
+}
+
+@-webkit-keyframes circleRotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+  }
+}
+
+@keyframes circleRotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+/**
+ * Text alignment
+ */
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-upper {
+  text-transform: uppercase;
+}
+
+.text-lower {
+  text-transform: lowercase;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+/**
+ * Image
+ */
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}

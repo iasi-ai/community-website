@@ -1,0 +1,53 @@
+/*
+ * IAȘI AI — The artificial intelligence community of Iași
+ *
+ * @link https://iasi.ai
+ * @author Eugen Bușoiu
+ * @copyright 2017 - 2022 All Rights Reserved.
+ */
+
+// Default button styling
+.button (@textColor, @textColorHover, @borderColor: transparent, @borderColorHover: @color1, @backgroundColor: transparent, @backgroundColorHover, @upperCase: false) {
+  color: @textColor;
+
+  text-decoration: none;
+
+  border: 2px solid @borderColor;
+  border-radius: .25em;
+
+  background-color: @backgroundColor;
+
+  & when (@upperCase = true) {
+    text-transform: uppercase;
+  }
+
+  &:hover {
+    color: @textColorHover;
+    border-color: @borderColorHover;
+    background-color: @backgroundColorHover;
+  }
+
+  &.active {
+    color: @textColorHover;
+    background-color: @backgroundColorHover;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, .25);
+  }
+}
+
+.button-bordered-bottom (@textColor, @backgroundColor, @backgroundColorHover, @bottomBorderWidth: 3px) {
+  background-color: @backgroundColor;
+
+  color: @textColor;
+  text-decoration: none;
+
+  border: @bottomBorderWidth solid transparent;
+
+  &:hover {
+    background-color: @backgroundColorHover;
+
+    color: @textColor;
+    text-decoration: none;
+
+    border-bottom-color: darken(@backgroundColorHover, 4%);
+  }
+}

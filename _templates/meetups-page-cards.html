@@ -1,0 +1,24 @@
+<!-- Meetup card: Online location -->
+<span class="meetup-venue">
+    <span><span data-icon="&#xe015;" class="ic-mr8"></span><a href="{{meetup.onlineUrl}}" target="_blank" rel="nofollow noopener external">Online</a></span>
+</span>
+
+<!-- Meetup card: Venue -->
+<span class="meetup-venue">
+    <span><span data-icon="&#xe015;" class="ic-mr8"></span><a href="https://maps.google.com/maps?q={{meetup.venue.name}}&center={{meetup.venue.lat}},{{meetup.venue.lng}}" target="_blank" rel="nofollow noopener">{{meetup.venue.name}}</a></span>
+</span>
+
+<!-- Meetup card: Recording link -->
+<li>
+    <a href="{{meetup.recordingLink}}" class="btn btn-sm btn-def btn-youtube" target="_blank" title="View event recording" rel="noopener"><span data-icon="&#xe030;"></span></a>
+</li>
+
+<!-- Meetup card: GitHub repository link -->
+<li>
+    <a href="{{meetup.githubLink}}" class="btn btn-sm btn-def btn-1" target="_blank" title="Browse Github repository" rel="noopener"><span data-icon="&#xe001;"></span></a>
+</li>
+
+<!-- Meetup card: Download slides -->
+<li>
+    <a href="{{meetup.downloadLink}}" class="btn btn-sm btn-def btn-1" target="_blank" title="View presentation slide deck" rel="noopener"><span data-icon="&#xe00b;"></span></a>
+</li>

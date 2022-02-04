@@ -316,16 +316,28 @@ const IasiAIApp = (() => {
 
         if (timeline && wideScreen) {
 
+            // Get cards and set ordering
             let meetupCardsContainer = timeline.querySelector('.meetup-cards'),
                 meetupCards = meetupCardsContainer.querySelectorAll('.meetup-card'),
-                meetupCardsLength = meetupCards.length,
-                containerHeight = 0;
+                meetupCardsCount = meetupCards.length,
+                containerHeight = 0,
+                ordering = 0,
+                middlePosition = Math.round(meetupCardsCount / 2),
+                leftPosition = 0,
+                rightPosition = 0;
 
-            for (let i = 0; i < meetupCardsLength; i++) {
-                let sizes = meetupCards[i].getBoundingClientRect();
-                containerHeight += (i % 2 === 0) ?
-                    Math.round(sizes.height) + 105 : (meetupCardsLength > 2 ? 0 : 100);
-            }
+            meetupCards.forEach((m) => {
+
+                // Get card size
+                let cardSize = m.getBoundingClientRect();
+
+                // Calculate container height
+                containerHeight += (ordering % 2) ?
+                    (meetupCardsCount > 2 ? 0 : 100) : Math.round(cardSize.height) + 105;
+
+                // Set ordering
+                m.style.order = (ordering++ % 2) ? `${middlePosition + rightPosition++}` : `${leftPosition++}`;
+            });
 
             // Normalize height
             meetupCardsContainer.style.height = `${containerHeight}px`;

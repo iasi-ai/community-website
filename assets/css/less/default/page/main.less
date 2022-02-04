@@ -72,6 +72,17 @@ main {
       padding: 1.5em 2em;
       border-radius: .5em;
     }
+
+    & > ul {
+      & > li {
+        list-style: disc;
+        margin: .4em 2.4em;
+
+        &::marker {
+          color: @color1;
+        }
+      }
+    }
   }
 
   // Image

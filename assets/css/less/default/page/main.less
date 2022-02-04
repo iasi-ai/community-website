@@ -65,7 +65,7 @@ main {
 
   blockquote {
     .grid;
-    margin: 2em auto;
+    margin: 2em auto 3 m;
 
     @media (min-width: @mediaQueryLarge) {
       border-left: 4px solid @color6;
@@ -75,11 +75,14 @@ main {
 
     & > ul {
       & > li {
-        list-style: disc;
         margin: .4em 2.4em;
 
-        &::marker {
+        &:before {
+          content: '\2022';
           color: @color1;
+          display: inline-block;
+          width: 1em;
+          margin-left: -1em;
         }
       }
     }

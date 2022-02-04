@@ -335,7 +335,9 @@ const IasiAIApp = (() => {
                 m.style.order = (ordering % 2) ?
                     `${middlePosition + rightPosition++}` : `${leftPosition++}`;
 
-                containerHeight += Math.round(cardSize.height) + 105;
+                containerHeight += (ordering % 2 === 0) ?
+                    Math.round(cardSize.height) + 105 : (meetupCardsCount > 2 ? 0 : 100);
+
                 ordering++;
             });
 

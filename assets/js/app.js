@@ -331,12 +331,12 @@ const IasiAIApp = (() => {
                 // Get card size
                 let cardSize = m.getBoundingClientRect();
 
-                // Calculate container height
-                containerHeight += (ordering % 2) ?
-                    (meetupCardsCount > 2 ? 0 : 100) : Math.round(cardSize.height) + 105;
+                // Calculate height and set ordering
+                m.style.order = (ordering % 2) ?
+                    `${middlePosition + rightPosition++}` : `${leftPosition++}`;
 
-                // Set ordering
-                m.style.order = (ordering++ % 2) ? `${middlePosition + rightPosition++}` : `${leftPosition++}`;
+                containerHeight += Math.round(cardSize.height) + 105;
+                ordering++;
             });
 
             // Normalize height

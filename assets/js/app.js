@@ -312,13 +312,32 @@ const IasiAIApp = (() => {
     function arrangeMeetupCards() {
 
         let timeline = document.querySelector('.timeline'),
-            wideScreen = window.matchMedia('(min-width: 1000px)').matches;
+            wideScreen = window.matchMedia('(min-width: 1000px)').matches,
+            showMoreMeetupsButton = timeline.querySelector('.btn-show-more-meetups'),
+            meetupCardsContainer = timeline.querySelector('.meetup-cards');
+
+        // Attach event on show more meetups button
+        if (showMoreMeetupsButton) {
+            showMoreMeetupsButton.addEventListener('click', () => {
+
+                let hiddenMeetups = meetupCardsContainer.querySelectorAll('.meetup-card.hide');
+
+                // Show hidden meetups
+                hiddenMeetups.forEach((m) => {
+                    m.classList.remove('hide');
+                });
+
+                // Remove button
+                showMoreMeetupsButton.parentNode.removeChild(showMoreMeetupsButton);
+
+                IasiAIApp.arrangeCards();
+            });
+        }
 
         if (timeline && wideScreen) {
 
             // Get cards and set ordering
-            let meetupCardsContainer = timeline.querySelector('.meetup-cards'),
-                meetupCards = meetupCardsContainer.querySelectorAll('.meetup-card'),
+            let meetupCards = meetupCardsContainer.querySelectorAll('.meetup-card:not(.hide)'),
                 meetupCardsCount = meetupCards.length,
                 containerHeight = 0,
                 ordering = 0,
@@ -336,7 +355,7 @@ const IasiAIApp = (() => {
                     `${middlePosition + rightPosition++}` : `${leftPosition++}`;
 
                 containerHeight += (ordering % 2 === 0) ?
-                    Math.round(cardSize.height) + 105 : 90;
+                    Math.round(cardSize.height) + 105 : 35;
 
                 ordering++;
             });

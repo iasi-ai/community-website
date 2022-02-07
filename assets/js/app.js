@@ -318,7 +318,10 @@ const IasiAIApp = (() => {
 
         // Attach event on show more meetups button
         if (showMoreMeetupsButton) {
-            showMoreMeetupsButton.addEventListener('click', () => {
+            showMoreMeetupsButton.addEventListener('click', (e) => {
+
+                e.preventDefault();
+                e.stopPropagation();
 
                 let hiddenMeetups = meetupCardsContainer.querySelectorAll('.meetup-card.hide');
 

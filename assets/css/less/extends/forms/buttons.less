@@ -52,6 +52,10 @@
 @buttonYouTubeBackgroundColor: @color13;
 @buttonYouTubeBackgroundHoverColor: darken(@buttonYouTubeBackgroundColor, 6%);
 
+@buttonMediumTextColor: @whiteTextColor;
+@buttonMediumBackgroundColor: @color14;
+@buttonMediumBackgroundHoverColor: @color14;
+
 // Buttons
 // Disabled button
 .btn-disabled {
@@ -101,4 +105,9 @@
 // YouTube
 .btn-youtube {
   .button-bordered-bottom(@buttonYouTubeTextColor, @buttonYouTubeBackgroundColor, @buttonYouTubeBackgroundHoverColor);
+}
+
+// Medium
+.btn-medium {
+  .button-bordered-bottom(@buttonMediumTextColor, @buttonMediumBackgroundColor, @buttonMediumBackgroundHoverColor);
 }

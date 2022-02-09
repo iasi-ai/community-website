@@ -311,10 +311,8 @@ const IasiAIApp = (() => {
      */
     function arrangeMeetupCards() {
 
-        const timeline = document.querySelector('.timeline'),
-            wideScreen = window.matchMedia('(min-width: 1000px)').matches;
-
-        if (timeline && wideScreen) {
+        const timeline = document.querySelector('.timeline');
+        if (timeline) {
 
             const showMoreMeetupsButton = timeline.querySelector('.btn-show-more-meetups'),
                 meetupCardsContainer = timeline.querySelector('.meetup-cards');

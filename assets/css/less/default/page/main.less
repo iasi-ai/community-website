@@ -72,6 +72,24 @@ main {
       padding: 1.5em 2em;
       border-radius: .5em;
     }
+
+    ul {
+      margin: 1em;
+
+      li {
+        margin: 0 0 .5em;
+
+        &:before {
+          display: inline-block;
+          content: '\2022';
+          font-weight: 700;
+          width: 1em;
+          margin-left: -1em;
+          line-height: 2em;
+          color: @color1;
+        }
+      }
+    }
   }
 
   // Image

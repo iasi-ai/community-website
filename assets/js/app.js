@@ -311,33 +311,34 @@ const IasiAIApp = (() => {
      */
     function arrangeMeetupCards() {
 
-        let timeline = document.querySelector('.timeline'),
-            wideScreen = window.matchMedia('(min-width: 1000px)').matches,
-            showMoreMeetupsButton = timeline.querySelector('.btn-show-more-meetups'),
-            meetupCardsContainer = timeline.querySelector('.meetup-cards');
-
-        // Attach event on show more meetups button
-        if (showMoreMeetupsButton) {
-            showMoreMeetupsButton.addEventListener('click', (e) => {
-
-                e.preventDefault();
-                e.stopPropagation();
-
-                let hiddenMeetups = meetupCardsContainer.querySelectorAll('.meetup-card.hide');
-
-                // Show hidden meetups
-                hiddenMeetups.forEach((m) => {
-                    m.classList.remove('hide');
-                });
-
-                // Remove button
-                showMoreMeetupsButton.parentNode.removeChild(showMoreMeetupsButton);
-
-                IasiAIApp.arrangeCards();
-            });
-        }
+        const timeline = document.querySelector('.timeline'),
+            wideScreen = window.matchMedia('(min-width: 1000px)').matches;
 
         if (timeline && wideScreen) {
+
+            const showMoreMeetupsButton = timeline.querySelector('.btn-show-more-meetups'),
+                meetupCardsContainer = timeline.querySelector('.meetup-cards');
+
+            // Attach event on show more meetups button
+            if (showMoreMeetupsButton) {
+                showMoreMeetupsButton.addEventListener('click', (e) => {
+
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    let hiddenMeetups = meetupCardsContainer.querySelectorAll('.meetup-card.hide');
+
+                    // Show hidden meetups
+                    hiddenMeetups.forEach((m) => {
+                        m.classList.remove('hide');
+                    });
+
+                    // Remove button
+                    showMoreMeetupsButton.parentNode.removeChild(showMoreMeetupsButton);
+
+                    IasiAIApp.arrangeCards();
+                });
+            }
 
             // Get cards and set ordering
             let meetupCards = meetupCardsContainer.querySelectorAll('.meetup-card:not(.hide)'),

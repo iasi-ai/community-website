@@ -354,7 +354,7 @@ const IasiAIApp = (() => {
                     `${middlePosition + rightPosition++}` : `${leftPosition++}`;
 
                 containerHeight += (ordering % 2 === 0) ?
-                    650 : 0;
+                    610 : 0;
 
                 ordering++;
             });

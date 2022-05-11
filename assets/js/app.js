@@ -311,10 +311,8 @@ const IasiAIApp = (() => {
      */
     function arrangeMeetupCards() {
 
-        const timeline = document.querySelector('.timeline'),
-            mediaQuery = window.matchMedia('(max-width: 1023px)').matches;
-
-        if (timeline && mediaQuery) {
+        const timeline = document.querySelector('.timeline');
+        if (timeline) {
 
             const showMoreMeetupsButton = timeline.querySelector('.btn-show-more-meetups'),
                 meetupCardsContainer = timeline.querySelector('.meetup-cards');
@@ -340,29 +338,34 @@ const IasiAIApp = (() => {
                 });
             }
 
-            // Get cards and set ordering
-            let meetupCards = meetupCardsContainer.querySelectorAll('.meetup-card:not(.hide)'),
-                meetupCardsCount = meetupCards.length,
-                containerHeight = 0,
-                ordering = 0,
-                middlePosition = Math.round(meetupCardsCount / 2),
-                leftPosition = 0,
-                rightPosition = 0;
+            // Get resolution
+            const mediaQuery = window.matchMedia('(min-width: 1023px)').matches;
+            if (mediaQuery) {
 
-            meetupCards.forEach((m) => {
+                // Get cards and set ordering
+                let meetupCards = meetupCardsContainer.querySelectorAll('.meetup-card:not(.hide)'),
+                    meetupCardsCount = meetupCards.length,
+                    containerHeight = 0,
+                    ordering = 0,
+                    middlePosition = Math.round(meetupCardsCount / 2),
+                    leftPosition = 0,
+                    rightPosition = 0;
 
-                // Calculate height and set ordering
-                m.style.order = (ordering % 2) ?
-                    `${middlePosition + rightPosition++}` : `${leftPosition++}`;
+                meetupCards.forEach((m) => {
 
-                containerHeight += (ordering % 2 === 0) ?
-                    610 : 0;
+                    // Calculate height and set ordering
+                    m.style.order = (ordering % 2) ?
+                        `${middlePosition + rightPosition++}` : `${leftPosition++}`;
 
-                ordering++;
-            });
+                    containerHeight += (ordering % 2 === 0) ?
+                        606 : 0;
 
-            // Normalize height
-            meetupCardsContainer.style.height = `${containerHeight}px`;
+                    ordering++;
+                });
+
+                // Normalize height
+                meetupCardsContainer.style.height = `${containerHeight}px`;
+            }
         }
     }
 

@@ -311,8 +311,10 @@ const IasiAIApp = (() => {
      */
     function arrangeMeetupCards() {
 
-        const timeline = document.querySelector('.timeline');
-        if (timeline) {
+        const timeline = document.querySelector('.timeline'),
+            mediaQuery = window.matchMedia('(max-width: 1023px)').matches;
+
+        if (timeline && mediaQuery) {
 
             const showMoreMeetupsButton = timeline.querySelector('.btn-show-more-meetups'),
                 meetupCardsContainer = timeline.querySelector('.meetup-cards');

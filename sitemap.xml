@@ -77,6 +77,12 @@
         <priority>0.8</priority>
     </url>
     <url>
+        <loc>https://iasi.ai/meetups/introduction-to-automatic-differentiation/</loc>
+        <lastmod>2023-02-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
         <loc>https://iasi.ai/meetups/first-steps-in-ai-2022-edition/</loc>
         <lastmod>2022-06-24</lastmod>
         <changefreq>monthly</changefreq>

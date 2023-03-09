@@ -3,7 +3,7 @@
  *
  * @link https://iasi.ai
  * @author Eugen Bușoiu
- * @copyright 2017 - 2022 All Rights Reserved.
+ * @copyright 2017 - 2023 All Rights Reserved [iasi.ai].
  */
 
 'use strict';
@@ -358,7 +358,7 @@ const IasiAIApp = (() => {
                         `${middlePosition + rightPosition++}` : `${leftPosition++}`;
 
                     containerHeight += (ordering % 2 === 0) ?
-                        610 : 0;
+                        580 : 0;
 
                     ordering++;
                 });

@@ -60,43 +60,11 @@
  * Visible phone/desktop
  */
 .hide {
-  display: none !important;
+  visibility: hidden;
 }
 
 .show {
-  display: block !important;
-}
-
-.show-inline {
-  display: inline-block !important;
-}
-
-.show-sm {
-  .show;
-  .hide-lg;
-}
-
-.show-lg {
-  @media (min-width: 768px) {
-    .show;
-  }
-}
-
-.show-inline-lg {
-  @media (min-width: 768px) {
-    .show-inline;
-  }
-}
-
-.hide-sm {
-  .hide;
-  .show-lg;
-}
-
-.hide-lg {
-  @media (min-width: 768px) {
-    .hide;
-  }
+  visibility: visible;
 }
 
 /**

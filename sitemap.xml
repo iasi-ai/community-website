@@ -89,6 +89,18 @@
         <priority>0.8</priority>
     </url>
     <url>
+        <loc>https://iasi.ai/meetups/engineering-for-science-accelerating-machine-learning-ring/</loc>
+        <lastmod>2023-10-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://iasi.ai/meetups/the-cloud-edge-ai-continuum/</loc>
+        <lastmod>2023-04-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
         <loc>https://iasi.ai/meetups/introduction-to-automatic-differentiation/</loc>
         <lastmod>2023-02-24</lastmod>
         <changefreq>monthly</changefreq>

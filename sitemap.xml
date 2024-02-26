@@ -89,6 +89,12 @@
         <priority>0.8</priority>
     </url>
     <url>
+        <loc>https://iasi.ai/meetups/engineering-intelligence-through-agent-interaction/</loc>
+        <lastmod>2024-02-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
         <loc>https://iasi.ai/meetups/behind-the-scenes-inside-engine-room-model-pipeline/</loc>
         <lastmod>2024-02-25</lastmod>
         <changefreq>monthly</changefreq>

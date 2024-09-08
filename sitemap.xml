@@ -43,7 +43,7 @@
     </url>
     <url>
         <loc>https://iasi.ai/initiatives/</loc>
-        <lastmod>2023-05-23</lastmod>
+        <lastmod>2024-09-08</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
     </url>
@@ -62,6 +62,12 @@
     <url>
         <loc>https://iasi.ai/initiatives/ai-in-medicine/</loc>
         <lastmod>2023-05-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://iasi.ai/initiatives/ai-in-education/</loc>
+        <lastmod>2024-09-08</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>

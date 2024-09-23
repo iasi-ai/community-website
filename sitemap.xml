@@ -101,6 +101,18 @@
         <priority>0.8</priority>
     </url>
     <url>
+        <loc>https://iasi.ai/meetups/protecting-rights-seizing-opportunities/</loc>
+        <lastmod>2024-09-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://iasi.ai/meetups/first-steps-in-ai-2024-edition/</loc>
+        <lastmod>2024-04-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
         <loc>https://iasi.ai/meetups/ai-as-growth-accelerator/</loc>
         <lastmod>2024-04-26</lastmod>
         <changefreq>monthly</changefreq>
